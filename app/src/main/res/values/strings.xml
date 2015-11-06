@@ -1,0 +1,5 @@
+<resources>
+	<string name="app_name">Task1</string>
+	<string name="activity_main_second_button">Второй экран</string>
+	<string name="activity_main_first_button">Первый экран</string>
+</resources>

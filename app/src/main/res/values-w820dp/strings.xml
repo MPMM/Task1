@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="activity_main_second_button">Второй экран</string>
+	<string name="activity_main_first_button">Первый экран</string>
+</resources>
