@@ -20,10 +20,13 @@ public class FirstScreenActivity extends AppCompatActivity implements RadioGroup
 		{
 			rb = new RadioButton(this);
 			rb.setText(scaleType.name());
+			rb.setTag(scaleType);
 			radioGroup.addView(rb, RadioGroup.LayoutParams.WRAP_CONTENT, RadioGroup.LayoutParams.WRAP_CONTENT);
 		}
-		rb = (RadioButton) radioGroup.getChildAt(0);
+		/*rb = (RadioButton) radioGroup.getChildAt(0);
 		rb.setChecked(true);
+		*/
+		radioGroup.check(radioGroup.getChildAt(0).getId());
 	}
 
 	@Override
@@ -31,6 +34,7 @@ public class FirstScreenActivity extends AppCompatActivity implements RadioGroup
 	{
 		ImageView imageView = (ImageView) findViewById(R.id.first_screen_image_view_w);
 		RadioButton radioButton = (RadioButton) findViewById(checkedId);
-		imageView.setScaleType(ImageView.ScaleType.valueOf(radioButton.getText().toString()));
+		//imageView.setScaleType(ImageView.ScaleType.valueOf(radioButton.getText().toString()));
+		imageView.setScaleType((ImageView.ScaleType) radioButton.getTag());
 	}
 }
